@@ -104,7 +104,7 @@ bigtop {
     'scala' { version = '2.12.20'; version_base = version }
   }
   apache {
-    APACHE_MIRROR = "https://apache.osuosl.org"
+    APACHE_MIRROR = "https://mirrors.aliyun.com/apache"
     APACHE_ARCHIVE = "https://archive.apache.org/dist"
   }
 /** End of Base Configuration */
