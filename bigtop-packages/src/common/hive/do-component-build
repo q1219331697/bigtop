@@ -21,12 +21,13 @@ set -ex
 HIVE_MAVEN_OPTS=" -Dhbase.version=$HBASE_VERSION \
 -Dzookeeper.version=$ZOOKEEPER_VERSION \
 -Dhadoop.version=$HADOOP_VERSION \
--DskipTests \
+-DskipTests -Dmaven.test.skip=true \
 -Dtez.version=${TEZ_VERSION} \
--Dguava.version=27.0-jre \
--Dcurator.version=4.2.0
 "
+# -Dguava.version=27.0-jre \
+# -Dcurator.version=4.2.0
 
+JAVA_HOME=/usr/lib/jvm/java-17
 mvn ${HIVE_MAVEN_OPTS} clean install ${EXTRA_GOALS} -Pdist "$@"
 
 mkdir -p build/dist
