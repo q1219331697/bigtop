@@ -246,6 +246,7 @@ done
 %{usr_lib_spark}/conf
 %{usr_lib_spark}/data
 %{usr_lib_spark}/examples
+%{usr_lib_spark}/hive-jackson
 %{usr_lib_spark}/jars
 %exclude %{usr_lib_spark}/jars/datanucleus-*.jar
 %{usr_lib_spark}/licenses
