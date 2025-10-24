@@ -41,6 +41,12 @@ elif [[ "$0" == *debian* ]]; then
 fi
 sed -i "s/$repl_from/$repl_to/" flink-runtime-web/web-dashboard/package.json
 
+JAVA_HOME=/usr/lib/jvm/java-17
+# fix flink-fs-hadoop-shaded not found
+cd flink-filesystems/flink-fs-hadoop-shaded
+${BUILD_ENV} ../../mvnw install $FLINK_BUILD_OPTS -Drat.skip=true -DskipTests -Dhadoop.version=$HADOOP_VERSION "$@"
+cd -
+
 # Use Maven to build Flink from source
 ${BUILD_ENV} ./mvnw install $FLINK_BUILD_OPTS -Drat.skip=true -DskipTests -Dhadoop.version=$HADOOP_VERSION "$@"
 cd flink-dist
