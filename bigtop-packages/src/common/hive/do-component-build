@@ -21,7 +21,7 @@ set -ex
 HIVE_MAVEN_OPTS=" -Dhbase.version=$HBASE_VERSION \
 -Dzookeeper.version=$ZOOKEEPER_VERSION \
 -Dhadoop.version=$HADOOP_VERSION \
--DskipTests -Dmaven.test.skip=true \
+-DskipTests \
 -Dtez.version=${TEZ_VERSION} \
 "
 # -Dguava.version=27.0-jre \
