@@ -32,7 +32,7 @@ BUILD_OPTS="-Divy.home=${HOME}/.ivy2 -Dsbt.ivy.home=${HOME}/.ivy2 -Duser.home=${
             $SPARK_BUILD_OPTS"
 
 
-export JAVA_HOME=/usr/lib/jvm/java-17
+JAVA_HOME=/usr/lib/jvm/java-17
 
 # BIGTOP-3762
 export MAVEN_OPTS="${MAVEN_OPTS:--Xss64m -Xmx4g -XX:ReservedCodeCacheSize=1g}"
